@@ -1,5 +1,8 @@
 ﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
+using SharpGen.Runtime.Win32;
+using System.Buffers;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -17,16 +20,81 @@ namespace AssetStudio.GUI
                 var type = Properties.Settings.Default.convertType;
                 if (!TryExportFile(exportPath, item, "." + type.ToString().ToLower(), out var exportFullPath))
                     return false;
-                var image = m_Texture2D.ConvertToImage(true);
-                if (image == null)
-                    return false;
-                using (image)
-                {
-                    using (var file = File.OpenWrite(exportFullPath))
-                    {
-                        image.WriteToStream(file, type);
+                if(m_Texture2D.m_TextureFormat == TextureFormat.RGBAHalf && type == ImageFormat.Hdr) {
+                    var buff = ArrayPool<Byte>.Shared.Rent((int)m_Texture2D.image_data.Size);
+                    m_Texture2D.image_data.GetData(buff);
+
+                    int outPutSize = m_Texture2D.m_Width * m_Texture2D.m_Height * 4;
+                    var stream = ArrayPool<Half>.Shared.Rent(outPutSize);
+                    for(var i = 0; i < outPutSize; i += 4) {
+                        stream[i] = Half.ToHalf(buff, i * 2);
+                        stream[i + 1] = Half.ToHalf(buff, i * 2 + 2);
+                        stream[i + 2] = Half.ToHalf(buff, i * 2 + 4);
+                        stream[i + 3] = Half.ToHalf(buff, i * 2 + 6);
                     }
+
+                    var flippedStream = ArrayPool<Half>.Shared.Rent(outPutSize);
+                    for(int y = 0; y < m_Texture2D.m_Height; y++) {
+                        int rowSize = m_Texture2D.m_Width * 4;
+                        int srcRowStart = y * rowSize;
+                        int destRowStart = (m_Texture2D.m_Height - y - 1) * rowSize;
+
+                        Array.Copy(stream, srcRowStart, flippedStream, destRowStart, rowSize);
+                    }
+
+                    /*for(int index = 0; index != outPutSize; index += 4)
+                        Console.WriteLine(flippedStream[index].ToString() + " " + flippedStream[index + 1].ToString() +
+                            " " + flippedStream[index + 2].ToString() + " " + flippedStream[index + 3].ToString());*/
+
+                    String header =
+                        "#?RADIANCE\n" +
+                        //"EXPOSURE=1.0\n" +
+                        //"GAMMA=1.0\n" +
+                        "PRIMARIES=0 0 0 0 0 0 0 0\nFORMAT=32-bit_rle_rgbe\n\n" +
+                        "-Y " + m_Texture2D.m_Height.ToString() + " +X " + m_Texture2D.m_Width.ToString() + "\n";
+
+                    using(var file = new BinaryWriter(File.OpenWrite(exportFullPath))) {
+                        file.Write(System.Text.Encoding.ASCII.GetBytes(header));
+
+                        // from https://github.com/Opioid/rgbe/blob/master/encode.go
+                        for(int i = 0; i != outPutSize; i += 4) {
+                            float maxComponent = Math.Max(flippedStream[i], Math.Max(flippedStream[i + 1], flippedStream[i + 2]));
+                            byte[] rgbe = new byte[4];
+
+                            if(maxComponent < 1e-32f)
+                                rgbe[0] = rgbe[1] = rgbe[2] = rgbe[3] = 0;
+                            else {
+                                int exponent;
+                                float mantissa = (float)Double.Frexp((double)maxComponent, out exponent);
+
+                                mantissa *= 256.0f / maxComponent;
+
+                                rgbe[0] = (byte)(flippedStream[i] * mantissa);
+                                rgbe[1] = (byte)(flippedStream[i + 1] * mantissa);
+                                rgbe[2] = (byte)(flippedStream[i + 2] * mantissa);
+
+                                rgbe[3] = (byte)(exponent + 128);
+                            }
+
+                            foreach(byte channel in rgbe)
+                                file.Write(channel);
+                        }
+                    }
+
                     return true;
+                }
+                else { 
+                    var image = m_Texture2D.ConvertToImage(true);
+                    if (image == null)
+                        return false;
+                    using (image)
+                    {
+                        using (var file = File.OpenWrite(exportFullPath))
+                        {
+                            image.WriteToStream(file, type);
+                        }
+                        return true;
+                    }
                 }
             }
             else

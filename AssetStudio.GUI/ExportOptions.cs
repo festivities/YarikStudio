@@ -9,24 +9,20 @@ using System.Windows.Forms;
 
 namespace AssetStudio.GUI
 {
-    public partial class ExportOptions : Form
-    {
+    public partial class ExportOptions : Form {
         public bool Resetted = false;
         private Dictionary<ClassIDType, (bool, bool)> types = new Dictionary<ClassIDType, (bool, bool)>();
         private Dictionary<string, (bool, int)> uvs = new Dictionary<string, (bool, int)>();
         private Dictionary<string, int> texs = new Dictionary<string, int>();
-        public ExportOptions()
-        {
+        public ExportOptions() {
             InitializeComponent();
             assetGroupOptions.SelectedIndex = Properties.Settings.Default.assetGroupOption;
             restoreExtensionName.Checked = Properties.Settings.Default.restoreExtensionName;
             converttexture.Checked = Properties.Settings.Default.convertTexture;
             convertAudio.Checked = Properties.Settings.Default.convertAudio;
             var str = Properties.Settings.Default.convertType.ToString();
-            foreach (Control c in panel1.Controls)
-            {
-                if (c.Text == str)
-                {
+            foreach(Control c in panel1.Controls) {
+                if(c.Text == str) {
                     ((RadioButton)c).Checked = true;
                     break;
                 }
@@ -52,12 +48,10 @@ namespace AssetStudio.GUI
             uvs = JsonConvert.DeserializeObject<Dictionary<string, (bool, int)>>(Properties.Settings.Default.uvs);
 
             texTypeComboBox.SelectedIndex = 0;
-            
-            if (!string.IsNullOrEmpty(Properties.Settings.Default.texs))
-            {
+
+            if(!string.IsNullOrEmpty(Properties.Settings.Default.texs)) {
                 texs = JsonConvert.DeserializeObject<Dictionary<string, int>>(Properties.Settings.Default.texs);
-                if (texs.Count > 0 )
-                {
+                if(texs.Count > 0) {
                     texNameComboBox.Items.AddRange(texs.Keys.ToArray());
                     texNameComboBox.SelectedIndex = 0;
                     texTypeComboBox.SelectedIndex = texs.ElementAt(0).Value;
@@ -68,16 +62,13 @@ namespace AssetStudio.GUI
             uvsComboBox.SelectedIndex = 0;
         }
 
-        private void OKbutton_Click(object sender, EventArgs e)
-        {
+        private void OKbutton_Click(object sender, EventArgs e) {
             Properties.Settings.Default.assetGroupOption = assetGroupOptions.SelectedIndex;
             Properties.Settings.Default.restoreExtensionName = restoreExtensionName.Checked;
             Properties.Settings.Default.convertTexture = converttexture.Checked;
             Properties.Settings.Default.convertAudio = convertAudio.Checked;
-            foreach (Control c in panel1.Controls)
-            {
-                if (((RadioButton)c).Checked)
-                {
+            foreach(Control c in panel1.Controls) {
+                if(((RadioButton)c).Checked) {
                     Properties.Settings.Default.convertType = (ImageFormat)Enum.Parse(typeof(ImageFormat), c.Text);
                     break;
                 }
@@ -111,72 +102,56 @@ namespace AssetStudio.GUI
             Close();
         }
 
-        private void TypesComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (sender is ComboBox comboBox && types.TryGetValue((ClassIDType)comboBox.SelectedItem, out var param))
-            {
+        private void TypesComboBox_SelectedIndexChanged(object sender, EventArgs e) {
+            if(sender is ComboBox comboBox && types.TryGetValue((ClassIDType)comboBox.SelectedItem, out var param)) {
                 canParseCheckBox.Checked = param.Item1;
                 canExportCheckBox.Checked = param.Item2;
             }
         }
 
-        private void CanParseCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (sender is CheckBox checkBox && types.TryGetValue((ClassIDType)typesComboBox.SelectedItem, out var param))
-            {
+        private void CanParseCheckBox_CheckedChanged(object sender, EventArgs e) {
+            if(sender is CheckBox checkBox && types.TryGetValue((ClassIDType)typesComboBox.SelectedItem, out var param)) {
                 param.Item1 = checkBox.Checked;
                 types[(ClassIDType)typesComboBox.SelectedItem] = (param.Item1, param.Item2);
             }
         }
 
-        private void CanExportCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (sender is CheckBox checkBox && types.TryGetValue((ClassIDType)typesComboBox.SelectedItem, out var param))
-            {
+        private void CanExportCheckBox_CheckedChanged(object sender, EventArgs e) {
+            if(sender is CheckBox checkBox && types.TryGetValue((ClassIDType)typesComboBox.SelectedItem, out var param)) {
                 param.Item2 = checkBox.Checked;
                 types[(ClassIDType)typesComboBox.SelectedItem] = (param.Item1, param.Item2);
             }
         }
 
-        private void uvsComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (sender is ComboBox comboBox && uvs.TryGetValue(comboBox.SelectedItem.ToString(), out var param))
-            {
+        private void uvsComboBox_SelectedIndexChanged(object sender, EventArgs e) {
+            if(sender is ComboBox comboBox && uvs.TryGetValue(comboBox.SelectedItem.ToString(), out var param)) {
                 uvEnabledCheckBox.Checked = param.Item1;
                 uvTypesComboBox.SelectedIndex = param.Item2;
             }
         }
 
-        private void uvEnabledCheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            if (sender is CheckBox checkBox && uvs.TryGetValue(uvsComboBox.SelectedItem.ToString(), out var param))
-            {
+        private void uvEnabledCheckBox_CheckedChanged(object sender, EventArgs e) {
+            if(sender is CheckBox checkBox && uvs.TryGetValue(uvsComboBox.SelectedItem.ToString(), out var param)) {
                 param.Item1 = checkBox.Checked;
                 uvs[uvsComboBox.SelectedItem.ToString()] = (param.Item1, param.Item2);
             }
         }
 
-        private void uvTypesComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (sender is ComboBox comboBox && uvs.TryGetValue(uvsComboBox.SelectedItem.ToString(), out var param))
-            {
+        private void uvTypesComboBox_SelectedIndexChanged(object sender, EventArgs e) {
+            if(sender is ComboBox comboBox && uvs.TryGetValue(uvsComboBox.SelectedItem.ToString(), out var param)) {
                 param.Item2 = comboBox.SelectedIndex;
                 uvs[uvsComboBox.SelectedItem.ToString()] = (param.Item1, param.Item2);
             }
         }
 
-        private void TexNameComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(texNameComboBox.SelectedItem?.ToString()) && texs.TryGetValue(texNameComboBox.SelectedItem?.ToString(), out var type))
-            {
+        private void TexNameComboBox_SelectedIndexChanged(object sender, EventArgs e) {
+            if(!string.IsNullOrEmpty(texNameComboBox.SelectedItem?.ToString()) && texs.TryGetValue(texNameComboBox.SelectedItem?.ToString(), out var type)) {
                 texTypeComboBox.SelectedIndex = type;
             }
         }
 
-        private void AddTexNameButton_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(texNameComboBox.Text) && !texs.ContainsKey(texNameComboBox.Text))
-            {
+        private void AddTexNameButton_Click(object sender, EventArgs e) {
+            if(!string.IsNullOrEmpty(texNameComboBox.Text) && !texs.ContainsKey(texNameComboBox.Text)) {
                 texs[texNameComboBox.Text] = texTypeComboBox.SelectedIndex;
                 texNameComboBox.Items.Add(texNameComboBox.Text);
                 texNameComboBox.SelectedIndex = texNameComboBox.Items.Count - 1;
@@ -184,38 +159,30 @@ namespace AssetStudio.GUI
             }
         }
 
-        private void RemoveTexNameButton_Click(object sender, EventArgs e)
-        {
-            if (!string.IsNullOrEmpty(texNameComboBox.SelectedItem?.ToString()) && texs.ContainsKey(texNameComboBox.SelectedItem?.ToString()))
-            {
+        private void RemoveTexNameButton_Click(object sender, EventArgs e) {
+            if(!string.IsNullOrEmpty(texNameComboBox.SelectedItem?.ToString()) && texs.ContainsKey(texNameComboBox.SelectedItem?.ToString())) {
                 texs.Remove(texNameComboBox.SelectedItem?.ToString());
                 texNameComboBox.Items.Remove(texNameComboBox.SelectedItem?.ToString());
                 ActiveControl = null;
-                if (texNameComboBox.Items.Count > 0)
-                {
+                if(texNameComboBox.Items.Count > 0) {
                     texNameComboBox.SelectedIndex = 0;
                 }
-                else
-                {
+                else {
                     texNameComboBox.Text = "";
                     texTypeComboBox.SelectedIndex = 0;
                 }
             }
         }
 
-        private void TexTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (sender is ComboBox comboBox && !string.IsNullOrEmpty(texNameComboBox.SelectedItem?.ToString()) && texs.ContainsKey(texNameComboBox.SelectedItem?.ToString()))
-            {
+        private void TexTypeComboBox_SelectedIndexChanged(object sender, EventArgs e) {
+            if(sender is ComboBox comboBox && !string.IsNullOrEmpty(texNameComboBox.SelectedItem?.ToString()) && texs.ContainsKey(texNameComboBox.SelectedItem?.ToString())) {
                 texs[texNameComboBox.SelectedItem?.ToString()] = comboBox.SelectedIndex;
             }
         }
 
-        private void TypesComboBox_MouseHover(object sender, EventArgs e)
-        {
+        private void TypesComboBox_MouseHover(object sender, EventArgs e) {
             var sb = new StringBuilder();
-            foreach (var type in types)
-            {
+            foreach(var type in types) {
                 sb.Append($"{type.Key}: {(type.Value.Item1 ? '\x2713' : '\x2717')}, {(type.Value.Item2 ? '\x2713' : '\x2717')}\n");
             }
 
@@ -223,11 +190,9 @@ namespace AssetStudio.GUI
             toolTip.SetToolTip(typesComboBox, sb.ToString());
         }
 
-        private void uvsComboBox_MouseHover(object sender, EventArgs e)
-        {
+        private void uvsComboBox_MouseHover(object sender, EventArgs e) {
             var sb = new StringBuilder();
-            foreach (var uv in uvs)
-            {
+            foreach(var uv in uvs) {
                 sb.Append($"{uv.Key}: {uvTypesComboBox.Items[uv.Value.Item2]}, {(uv.Value.Item1 ? '\x2713' : '\x2717')}\n");
             }
 
@@ -235,11 +200,9 @@ namespace AssetStudio.GUI
             toolTip.SetToolTip(uvsComboBox, sb.ToString());
         }
 
-        private void TexTypeComboBox_MouseHover(object sender, EventArgs e)
-        {
+        private void TexTypeComboBox_MouseHover(object sender, EventArgs e) {
             var sb = new StringBuilder();
-            foreach (var tex in texs)
-            {
+            foreach(var tex in texs) {
                 sb.Append($"{tex.Key}: {texTypeComboBox.Items[tex.Value]}\n");
             }
 
@@ -247,16 +210,13 @@ namespace AssetStudio.GUI
             toolTip.SetToolTip(texTypeComboBox, sb.ToString());
         }
 
-        private void Key_MouseHover(object sender, EventArgs e)
-        {
+        private void Key_MouseHover(object sender, EventArgs e) {
             toolTip.ToolTipTitle = "Value";
             toolTip.SetToolTip(key, "Key in Hex");
         }
 
-        private void Reset_Click(object sender, EventArgs e)
-        {
-            foreach(SettingsProperty settingsProperty in Properties.Settings.Default.Properties)
-            {
+        private void Reset_Click(object sender, EventArgs e) {
+            foreach(SettingsProperty settingsProperty in Properties.Settings.Default.Properties) {
                 Properties.Settings.Default[settingsProperty.Name] = TypeDescriptor.GetConverter(settingsProperty.PropertyType).ConvertFrom(settingsProperty.DefaultValue);
             }
             Properties.Settings.Default.Save();
@@ -266,8 +226,7 @@ namespace AssetStudio.GUI
             Close();
         }
 
-        private void Cancel_Click(object sender, EventArgs e)
-        {
+        private void Cancel_Click(object sender, EventArgs e) {
             DialogResult = DialogResult.Cancel;
             Close();
         }

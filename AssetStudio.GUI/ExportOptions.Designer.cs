@@ -31,715 +31,733 @@ namespace AssetStudio.GUI
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
-            components = new System.ComponentModel.Container();
-            OKbutton = new Button();
-            Cancel = new Button();
-            groupBox1 = new GroupBox();
-            removeTexNameButton = new Button();
-            addTexNameButton = new Button();
-            texNameComboBox = new ComboBox();
-            label10 = new Label();
-            texTypeComboBox = new ComboBox();
-            uvTypesComboBox = new ComboBox();
-            uvEnabledCheckBox = new CheckBox();
-            uvsComboBox = new ComboBox();
-            canExportCheckBox = new CheckBox();
-            label8 = new Label();
-            canParseCheckBox = new CheckBox();
-            typesComboBox = new ComboBox();
-            label6 = new Label();
-            minimalAssetMap = new CheckBox();
-            assetGroupOptions = new ComboBox();
-            label7 = new Label();
-            openAfterExport = new CheckBox();
-            restoreExtensionName = new CheckBox();
-            key = new NumericUpDown();
-            encrypted = new CheckBox();
-            convertAudio = new CheckBox();
-            panel1 = new Panel();
-            totga = new RadioButton();
-            tojpg = new RadioButton();
-            topng = new RadioButton();
-            tobmp = new RadioButton();
-            converttexture = new CheckBox();
-            collectAnimations = new CheckBox();
-            groupBox2 = new GroupBox();
-            exportMaterials = new CheckBox();
-            exportBlendShape = new CheckBox();
-            exportAnimations = new CheckBox();
-            scaleFactor = new NumericUpDown();
-            label5 = new Label();
-            fbxFormat = new ComboBox();
-            label4 = new Label();
-            fbxVersion = new ComboBox();
-            label3 = new Label();
-            boneSize = new NumericUpDown();
-            label2 = new Label();
-            exportSkins = new CheckBox();
-            label1 = new Label();
-            filterPrecision = new NumericUpDown();
-            castToBone = new CheckBox();
-            exportAllNodes = new CheckBox();
-            eulerFilter = new CheckBox();
-            toolTip = new ToolTip(components);
-            Reset = new Button();
-            groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)key).BeginInit();
-            panel1.SuspendLayout();
-            groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)scaleFactor).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)boneSize).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)filterPrecision).BeginInit();
-            SuspendLayout();
+        private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
+            this.OKbutton = new Button();
+            this.Cancel = new Button();
+            this.groupBox1 = new GroupBox();
+            this.removeTexNameButton = new Button();
+            this.addTexNameButton = new Button();
+            this.texNameComboBox = new ComboBox();
+            this.label10 = new Label();
+            this.texTypeComboBox = new ComboBox();
+            this.uvTypesComboBox = new ComboBox();
+            this.uvEnabledCheckBox = new CheckBox();
+            this.uvsComboBox = new ComboBox();
+            this.canExportCheckBox = new CheckBox();
+            this.label8 = new Label();
+            this.canParseCheckBox = new CheckBox();
+            this.typesComboBox = new ComboBox();
+            this.label6 = new Label();
+            this.minimalAssetMap = new CheckBox();
+            this.assetGroupOptions = new ComboBox();
+            this.label7 = new Label();
+            this.openAfterExport = new CheckBox();
+            this.restoreExtensionName = new CheckBox();
+            this.key = new NumericUpDown();
+            this.encrypted = new CheckBox();
+            this.convertAudio = new CheckBox();
+            this.panel1 = new Panel();
+            this.tohdr = new RadioButton();
+            this.totga = new RadioButton();
+            this.tojpg = new RadioButton();
+            this.topng = new RadioButton();
+            this.tobmp = new RadioButton();
+            this.converttexture = new CheckBox();
+            this.collectAnimations = new CheckBox();
+            this.groupBox2 = new GroupBox();
+            this.exportMaterials = new CheckBox();
+            this.exportBlendShape = new CheckBox();
+            this.exportAnimations = new CheckBox();
+            this.scaleFactor = new NumericUpDown();
+            this.label5 = new Label();
+            this.fbxFormat = new ComboBox();
+            this.label4 = new Label();
+            this.fbxVersion = new ComboBox();
+            this.label3 = new Label();
+            this.boneSize = new NumericUpDown();
+            this.label2 = new Label();
+            this.exportSkins = new CheckBox();
+            this.label1 = new Label();
+            this.filterPrecision = new NumericUpDown();
+            this.castToBone = new CheckBox();
+            this.exportAllNodes = new CheckBox();
+            this.eulerFilter = new CheckBox();
+            this.toolTip = new ToolTip(this.components);
+            this.Reset = new Button();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)this.key).BeginInit();
+            this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)this.scaleFactor).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this.boneSize).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)this.filterPrecision).BeginInit();
+            this.SuspendLayout();
             // 
             // OKbutton
             // 
-            OKbutton.Location = new System.Drawing.Point(480, 428);
-            OKbutton.Margin = new Padding(4);
-            OKbutton.Name = "OKbutton";
-            OKbutton.Size = new System.Drawing.Size(88, 26);
-            OKbutton.TabIndex = 6;
-            OKbutton.Text = "OK";
-            OKbutton.UseVisualStyleBackColor = true;
-            OKbutton.Click += OKbutton_Click;
+            this.OKbutton.Location = new System.Drawing.Point(549, 571);
+            this.OKbutton.Margin = new Padding(5);
+            this.OKbutton.Name = "OKbutton";
+            this.OKbutton.Size = new System.Drawing.Size(101, 35);
+            this.OKbutton.TabIndex = 6;
+            this.OKbutton.Text = "OK";
+            this.OKbutton.UseVisualStyleBackColor = true;
+            this.OKbutton.Click += this.OKbutton_Click;
             // 
             // Cancel
             // 
-            Cancel.DialogResult = DialogResult.Cancel;
-            Cancel.Location = new System.Drawing.Point(576, 428);
-            Cancel.Margin = new Padding(4);
-            Cancel.Name = "Cancel";
-            Cancel.Size = new System.Drawing.Size(88, 26);
-            Cancel.TabIndex = 7;
-            Cancel.Text = "Cancel";
-            Cancel.UseVisualStyleBackColor = true;
-            Cancel.Click += Cancel_Click;
+            this.Cancel.DialogResult = DialogResult.Cancel;
+            this.Cancel.Location = new System.Drawing.Point(658, 571);
+            this.Cancel.Margin = new Padding(5);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(101, 35);
+            this.Cancel.TabIndex = 7;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += this.Cancel_Click;
             // 
             // groupBox1
             // 
-            groupBox1.AutoSize = true;
-            groupBox1.Controls.Add(removeTexNameButton);
-            groupBox1.Controls.Add(addTexNameButton);
-            groupBox1.Controls.Add(texNameComboBox);
-            groupBox1.Controls.Add(label10);
-            groupBox1.Controls.Add(texTypeComboBox);
-            groupBox1.Controls.Add(uvTypesComboBox);
-            groupBox1.Controls.Add(uvEnabledCheckBox);
-            groupBox1.Controls.Add(uvsComboBox);
-            groupBox1.Controls.Add(canExportCheckBox);
-            groupBox1.Controls.Add(label8);
-            groupBox1.Controls.Add(canParseCheckBox);
-            groupBox1.Controls.Add(typesComboBox);
-            groupBox1.Controls.Add(label6);
-            groupBox1.Controls.Add(minimalAssetMap);
-            groupBox1.Controls.Add(assetGroupOptions);
-            groupBox1.Controls.Add(label7);
-            groupBox1.Controls.Add(openAfterExport);
-            groupBox1.Controls.Add(restoreExtensionName);
-            groupBox1.Controls.Add(key);
-            groupBox1.Controls.Add(encrypted);
-            groupBox1.Controls.Add(convertAudio);
-            groupBox1.Controls.Add(panel1);
-            groupBox1.Controls.Add(converttexture);
-            groupBox1.Location = new System.Drawing.Point(14, 15);
-            groupBox1.Margin = new Padding(4);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(4);
-            groupBox1.Size = new System.Drawing.Size(271, 433);
-            groupBox1.TabIndex = 9;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Export";
+            this.groupBox1.AutoSize = true;
+            this.groupBox1.Controls.Add(this.removeTexNameButton);
+            this.groupBox1.Controls.Add(this.addTexNameButton);
+            this.groupBox1.Controls.Add(this.texNameComboBox);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.texTypeComboBox);
+            this.groupBox1.Controls.Add(this.uvTypesComboBox);
+            this.groupBox1.Controls.Add(this.uvEnabledCheckBox);
+            this.groupBox1.Controls.Add(this.uvsComboBox);
+            this.groupBox1.Controls.Add(this.canExportCheckBox);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.canParseCheckBox);
+            this.groupBox1.Controls.Add(this.typesComboBox);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.minimalAssetMap);
+            this.groupBox1.Controls.Add(this.assetGroupOptions);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.openAfterExport);
+            this.groupBox1.Controls.Add(this.restoreExtensionName);
+            this.groupBox1.Controls.Add(this.key);
+            this.groupBox1.Controls.Add(this.encrypted);
+            this.groupBox1.Controls.Add(this.convertAudio);
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.converttexture);
+            this.groupBox1.Location = new System.Drawing.Point(16, 20);
+            this.groupBox1.Margin = new Padding(5);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new Padding(5);
+            this.groupBox1.Size = new System.Drawing.Size(366, 577);
+            this.groupBox1.TabIndex = 9;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Export";
             // 
             // removeTexNameButton
             // 
-            removeTexNameButton.Location = new System.Drawing.Point(186, 387);
-            removeTexNameButton.Name = "removeTexNameButton";
-            removeTexNameButton.Size = new System.Drawing.Size(71, 23);
-            removeTexNameButton.TabIndex = 41;
-            removeTexNameButton.Text = "Remove";
-            removeTexNameButton.UseVisualStyleBackColor = true;
-            removeTexNameButton.Click += RemoveTexNameButton_Click;
+            this.removeTexNameButton.Location = new System.Drawing.Point(213, 516);
+            this.removeTexNameButton.Margin = new Padding(3, 4, 3, 4);
+            this.removeTexNameButton.Name = "removeTexNameButton";
+            this.removeTexNameButton.Size = new System.Drawing.Size(81, 31);
+            this.removeTexNameButton.TabIndex = 41;
+            this.removeTexNameButton.Text = "Remove";
+            this.removeTexNameButton.UseVisualStyleBackColor = true;
+            this.removeTexNameButton.Click += this.RemoveTexNameButton_Click;
             // 
             // addTexNameButton
             // 
-            addTexNameButton.Location = new System.Drawing.Point(199, 358);
-            addTexNameButton.Name = "addTexNameButton";
-            addTexNameButton.Size = new System.Drawing.Size(42, 23);
-            addTexNameButton.TabIndex = 13;
-            addTexNameButton.Text = "Add";
-            addTexNameButton.UseVisualStyleBackColor = true;
-            addTexNameButton.Click += AddTexNameButton_Click;
+            this.addTexNameButton.Location = new System.Drawing.Point(227, 477);
+            this.addTexNameButton.Margin = new Padding(3, 4, 3, 4);
+            this.addTexNameButton.Name = "addTexNameButton";
+            this.addTexNameButton.Size = new System.Drawing.Size(48, 31);
+            this.addTexNameButton.TabIndex = 13;
+            this.addTexNameButton.Text = "Add";
+            this.addTexNameButton.UseVisualStyleBackColor = true;
+            this.addTexNameButton.Click += this.AddTexNameButton_Click;
             // 
             // texNameComboBox
             // 
-            texNameComboBox.FormattingEnabled = true;
-            texNameComboBox.Location = new System.Drawing.Point(8, 373);
-            texNameComboBox.Name = "texNameComboBox";
-            texNameComboBox.Size = new System.Drawing.Size(81, 23);
-            texNameComboBox.TabIndex = 38;
-            texNameComboBox.SelectedIndexChanged += TexNameComboBox_SelectedIndexChanged;
+            this.texNameComboBox.FormattingEnabled = true;
+            this.texNameComboBox.Location = new System.Drawing.Point(9, 497);
+            this.texNameComboBox.Margin = new Padding(3, 4, 3, 4);
+            this.texNameComboBox.Name = "texNameComboBox";
+            this.texNameComboBox.Size = new System.Drawing.Size(92, 28);
+            this.texNameComboBox.TabIndex = 38;
+            this.texNameComboBox.SelectedIndexChanged += this.TexNameComboBox_SelectedIndexChanged;
             // 
             // label10
             // 
-            label10.AutoSize = true;
-            label10.Location = new System.Drawing.Point(9, 355);
-            label10.Margin = new Padding(4, 0, 4, 0);
-            label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(142, 15);
-            label10.TabIndex = 36;
-            label10.Text = "Texture mapping options:";
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(10, 473);
+            this.label10.Margin = new Padding(5, 0, 5, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(178, 20);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Texture mapping options:";
             // 
             // texTypeComboBox
             // 
-            texTypeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            texTypeComboBox.FormattingEnabled = true;
-            texTypeComboBox.Items.AddRange(new object[] { "Diffuse", "NormalMap", "Specular", "Bump", "Ambient", "Emissive", "Reflection", "Displacement" });
-            texTypeComboBox.Location = new System.Drawing.Point(95, 373);
-            texTypeComboBox.Name = "texTypeComboBox";
-            texTypeComboBox.Size = new System.Drawing.Size(79, 23);
-            texTypeComboBox.TabIndex = 35;
-            texTypeComboBox.SelectedIndexChanged += TexTypeComboBox_SelectedIndexChanged;
-            texTypeComboBox.MouseHover += TexTypeComboBox_MouseHover;
+            this.texTypeComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.texTypeComboBox.FormattingEnabled = true;
+            this.texTypeComboBox.Items.AddRange(new object[] { "Diffuse", "NormalMap", "Specular", "Bump", "Ambient", "Emissive", "Reflection", "Displacement" });
+            this.texTypeComboBox.Location = new System.Drawing.Point(109, 497);
+            this.texTypeComboBox.Margin = new Padding(3, 4, 3, 4);
+            this.texTypeComboBox.Name = "texTypeComboBox";
+            this.texTypeComboBox.Size = new System.Drawing.Size(90, 28);
+            this.texTypeComboBox.TabIndex = 35;
+            this.texTypeComboBox.SelectedIndexChanged += this.TexTypeComboBox_SelectedIndexChanged;
+            this.texTypeComboBox.MouseHover += this.TexTypeComboBox_MouseHover;
             // 
             // uvTypesComboBox
             // 
-            uvTypesComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            uvTypesComboBox.FormattingEnabled = true;
-            uvTypesComboBox.Items.AddRange(new object[] { "Diffuse", "NormalMap", "Specular", "Bump", "Ambient", "Emissive", "Reflection", "Displacement" });
-            uvTypesComboBox.Location = new System.Drawing.Point(89, 329);
-            uvTypesComboBox.Name = "uvTypesComboBox";
-            uvTypesComboBox.Size = new System.Drawing.Size(106, 23);
-            uvTypesComboBox.TabIndex = 34;
-            uvTypesComboBox.SelectedIndexChanged += uvTypesComboBox_SelectedIndexChanged;
+            this.uvTypesComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.uvTypesComboBox.FormattingEnabled = true;
+            this.uvTypesComboBox.Items.AddRange(new object[] { "Diffuse", "NormalMap", "Specular", "Bump", "Ambient", "Emissive", "Reflection", "Displacement" });
+            this.uvTypesComboBox.Location = new System.Drawing.Point(102, 439);
+            this.uvTypesComboBox.Margin = new Padding(3, 4, 3, 4);
+            this.uvTypesComboBox.Name = "uvTypesComboBox";
+            this.uvTypesComboBox.Size = new System.Drawing.Size(121, 28);
+            this.uvTypesComboBox.TabIndex = 34;
+            this.uvTypesComboBox.SelectedIndexChanged += this.uvTypesComboBox_SelectedIndexChanged;
             // 
             // uvEnabledCheckBox
             // 
-            uvEnabledCheckBox.AutoSize = true;
-            uvEnabledCheckBox.Location = new System.Drawing.Point(201, 333);
-            uvEnabledCheckBox.Name = "uvEnabledCheckBox";
-            uvEnabledCheckBox.Size = new System.Drawing.Size(60, 19);
-            uvEnabledCheckBox.TabIndex = 33;
-            uvEnabledCheckBox.Text = "Export";
-            uvEnabledCheckBox.UseVisualStyleBackColor = true;
-            uvEnabledCheckBox.CheckedChanged += uvEnabledCheckBox_CheckedChanged;
+            this.uvEnabledCheckBox.AutoSize = true;
+            this.uvEnabledCheckBox.Location = new System.Drawing.Point(230, 444);
+            this.uvEnabledCheckBox.Margin = new Padding(3, 4, 3, 4);
+            this.uvEnabledCheckBox.Name = "uvEnabledCheckBox";
+            this.uvEnabledCheckBox.Size = new System.Drawing.Size(74, 24);
+            this.uvEnabledCheckBox.TabIndex = 33;
+            this.uvEnabledCheckBox.Text = "Export";
+            this.uvEnabledCheckBox.UseVisualStyleBackColor = true;
+            this.uvEnabledCheckBox.CheckedChanged += this.uvEnabledCheckBox_CheckedChanged;
             // 
             // uvsComboBox
             // 
-            uvsComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            uvsComboBox.FormattingEnabled = true;
-            uvsComboBox.Items.AddRange(new object[] { "UV0", "UV1", "UV2", "UV3", "UV4", "UV5", "UV6", "UV7" });
-            uvsComboBox.Location = new System.Drawing.Point(8, 329);
-            uvsComboBox.Name = "uvsComboBox";
-            uvsComboBox.Size = new System.Drawing.Size(75, 23);
-            uvsComboBox.TabIndex = 32;
-            uvsComboBox.SelectedIndexChanged += uvsComboBox_SelectedIndexChanged;
-            uvsComboBox.MouseHover += uvsComboBox_MouseHover;
+            this.uvsComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.uvsComboBox.FormattingEnabled = true;
+            this.uvsComboBox.Items.AddRange(new object[] { "UV0", "UV1", "UV2", "UV3", "UV4", "UV5", "UV6", "UV7" });
+            this.uvsComboBox.Location = new System.Drawing.Point(9, 439);
+            this.uvsComboBox.Margin = new Padding(3, 4, 3, 4);
+            this.uvsComboBox.Name = "uvsComboBox";
+            this.uvsComboBox.Size = new System.Drawing.Size(85, 28);
+            this.uvsComboBox.TabIndex = 32;
+            this.uvsComboBox.SelectedIndexChanged += this.uvsComboBox_SelectedIndexChanged;
+            this.uvsComboBox.MouseHover += this.uvsComboBox_MouseHover;
             // 
             // canExportCheckBox
             // 
-            canExportCheckBox.AutoSize = true;
-            canExportCheckBox.Location = new System.Drawing.Point(200, 287);
-            canExportCheckBox.Name = "canExportCheckBox";
-            canExportCheckBox.Size = new System.Drawing.Size(60, 19);
-            canExportCheckBox.TabIndex = 31;
-            canExportCheckBox.Text = "Export";
-            canExportCheckBox.UseVisualStyleBackColor = true;
-            canExportCheckBox.CheckedChanged += CanExportCheckBox_CheckedChanged;
+            this.canExportCheckBox.AutoSize = true;
+            this.canExportCheckBox.Location = new System.Drawing.Point(229, 383);
+            this.canExportCheckBox.Margin = new Padding(3, 4, 3, 4);
+            this.canExportCheckBox.Name = "canExportCheckBox";
+            this.canExportCheckBox.Size = new System.Drawing.Size(74, 24);
+            this.canExportCheckBox.TabIndex = 31;
+            this.canExportCheckBox.Text = "Export";
+            this.canExportCheckBox.UseVisualStyleBackColor = true;
+            this.canExportCheckBox.CheckedChanged += this.CanExportCheckBox_CheckedChanged;
             // 
             // label8
             // 
-            label8.AutoSize = true;
-            label8.Location = new System.Drawing.Point(8, 267);
-            label8.Margin = new Padding(4, 0, 4, 0);
-            label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(132, 15);
-            label8.TabIndex = 30;
-            label8.Text = "Selected unity type can:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(9, 356);
+            this.label8.Margin = new Padding(5, 0, 5, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(165, 20);
+            this.label8.TabIndex = 30;
+            this.label8.Text = "Selected unity type can:";
             // 
             // canParseCheckBox
             // 
-            canParseCheckBox.AutoSize = true;
-            canParseCheckBox.Location = new System.Drawing.Point(140, 287);
-            canParseCheckBox.Name = "canParseCheckBox";
-            canParseCheckBox.Size = new System.Drawing.Size(54, 19);
-            canParseCheckBox.TabIndex = 29;
-            canParseCheckBox.Text = "Parse";
-            canParseCheckBox.UseVisualStyleBackColor = true;
-            canParseCheckBox.CheckedChanged += CanParseCheckBox_CheckedChanged;
+            this.canParseCheckBox.AutoSize = true;
+            this.canParseCheckBox.Location = new System.Drawing.Point(160, 383);
+            this.canParseCheckBox.Margin = new Padding(3, 4, 3, 4);
+            this.canParseCheckBox.Name = "canParseCheckBox";
+            this.canParseCheckBox.Size = new System.Drawing.Size(65, 24);
+            this.canParseCheckBox.TabIndex = 29;
+            this.canParseCheckBox.Text = "Parse";
+            this.canParseCheckBox.UseVisualStyleBackColor = true;
+            this.canParseCheckBox.CheckedChanged += this.CanParseCheckBox_CheckedChanged;
             // 
             // typesComboBox
             // 
-            typesComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
-            typesComboBox.FormattingEnabled = true;
-            typesComboBox.Items.AddRange(new object[] { ClassIDType.Animation, ClassIDType.AnimationClip, ClassIDType.Animator, ClassIDType.AnimatorController, ClassIDType.AnimatorOverrideController, ClassIDType.AssetBundle, ClassIDType.AudioClip, ClassIDType.Avatar, ClassIDType.Font, ClassIDType.GameObject, ClassIDType.IndexObject, ClassIDType.Material, ClassIDType.Mesh, ClassIDType.MeshFilter, ClassIDType.MeshRenderer, ClassIDType.MiHoYoBinData, ClassIDType.MonoBehaviour, ClassIDType.MonoScript, ClassIDType.MovieTexture, ClassIDType.PlayerSettings, ClassIDType.RectTransform, ClassIDType.Shader, ClassIDType.SkinnedMeshRenderer, ClassIDType.Sprite, ClassIDType.SpriteAtlas, ClassIDType.TextAsset, ClassIDType.Texture2D, ClassIDType.Transform, ClassIDType.VideoClip, ClassIDType.ResourceManager });
-            typesComboBox.Location = new System.Drawing.Point(7, 285);
-            typesComboBox.Name = "typesComboBox";
-            typesComboBox.Size = new System.Drawing.Size(127, 23);
-            typesComboBox.TabIndex = 28;
-            typesComboBox.SelectedIndexChanged += TypesComboBox_SelectedIndexChanged;
-            typesComboBox.MouseHover += TypesComboBox_MouseHover;
+            this.typesComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.typesComboBox.FormattingEnabled = true;
+            this.typesComboBox.Items.AddRange(new object[] { ClassIDType.Animation, ClassIDType.AnimationClip, ClassIDType.Animator, ClassIDType.AnimatorController, ClassIDType.AnimatorOverrideController, ClassIDType.AssetBundle, ClassIDType.AudioClip, ClassIDType.Avatar, ClassIDType.Font, ClassIDType.GameObject, ClassIDType.IndexObject, ClassIDType.Material, ClassIDType.Mesh, ClassIDType.MeshFilter, ClassIDType.MeshRenderer, ClassIDType.MiHoYoBinData, ClassIDType.MonoBehaviour, ClassIDType.MonoScript, ClassIDType.MovieTexture, ClassIDType.PlayerSettings, ClassIDType.RectTransform, ClassIDType.Shader, ClassIDType.SkinnedMeshRenderer, ClassIDType.Sprite, ClassIDType.SpriteAtlas, ClassIDType.TextAsset, ClassIDType.Texture2D, ClassIDType.Transform, ClassIDType.VideoClip, ClassIDType.ResourceManager });
+            this.typesComboBox.Location = new System.Drawing.Point(8, 380);
+            this.typesComboBox.Margin = new Padding(3, 4, 3, 4);
+            this.typesComboBox.Name = "typesComboBox";
+            this.typesComboBox.Size = new System.Drawing.Size(145, 28);
+            this.typesComboBox.TabIndex = 28;
+            this.typesComboBox.SelectedIndexChanged += this.TypesComboBox_SelectedIndexChanged;
+            this.typesComboBox.MouseHover += this.TypesComboBox_MouseHover;
             // 
             // label6
             // 
-            label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(7, 311);
-            label6.Margin = new Padding(4, 0, 4, 0);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(119, 15);
-            label6.TabIndex = 27;
-            label6.Text = "UV mapping options:";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(8, 415);
+            this.label6.Margin = new Padding(5, 0, 5, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(149, 20);
+            this.label6.TabIndex = 27;
+            this.label6.Text = "UV mapping options:";
             // 
             // minimalAssetMap
             // 
-            minimalAssetMap.AutoSize = true;
-            minimalAssetMap.Location = new System.Drawing.Point(7, 129);
-            minimalAssetMap.Name = "minimalAssetMap";
-            minimalAssetMap.Size = new System.Drawing.Size(125, 19);
-            minimalAssetMap.TabIndex = 17;
-            minimalAssetMap.Text = "Minimal AssetMap";
-            minimalAssetMap.UseVisualStyleBackColor = true;
+            this.minimalAssetMap.AutoSize = true;
+            this.minimalAssetMap.Location = new System.Drawing.Point(8, 172);
+            this.minimalAssetMap.Margin = new Padding(3, 4, 3, 4);
+            this.minimalAssetMap.Name = "minimalAssetMap";
+            this.minimalAssetMap.Size = new System.Drawing.Size(154, 24);
+            this.minimalAssetMap.TabIndex = 17;
+            this.minimalAssetMap.Text = "Minimal AssetMap";
+            this.minimalAssetMap.UseVisualStyleBackColor = true;
             // 
             // assetGroupOptions
             // 
-            assetGroupOptions.DropDownStyle = ComboBoxStyle.DropDownList;
-            assetGroupOptions.FormattingEnabled = true;
-            assetGroupOptions.Items.AddRange(new object[] { "type name", "container path", "source file name", "do not group" });
-            assetGroupOptions.Location = new System.Drawing.Point(7, 240);
-            assetGroupOptions.Margin = new Padding(4);
-            assetGroupOptions.Name = "assetGroupOptions";
-            assetGroupOptions.Size = new System.Drawing.Size(173, 23);
-            assetGroupOptions.TabIndex = 12;
+            this.assetGroupOptions.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.assetGroupOptions.FormattingEnabled = true;
+            this.assetGroupOptions.Items.AddRange(new object[] { "type name", "container path", "source file name", "do not group" });
+            this.assetGroupOptions.Location = new System.Drawing.Point(8, 320);
+            this.assetGroupOptions.Margin = new Padding(5);
+            this.assetGroupOptions.Name = "assetGroupOptions";
+            this.assetGroupOptions.Size = new System.Drawing.Size(197, 28);
+            this.assetGroupOptions.TabIndex = 12;
             // 
             // label7
             // 
-            label7.AutoSize = true;
-            label7.Location = new System.Drawing.Point(8, 221);
-            label7.Margin = new Padding(4, 0, 4, 0);
-            label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(140, 15);
-            label7.TabIndex = 11;
-            label7.Text = "Group exported assets by";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(9, 295);
+            this.label7.Margin = new Padding(5, 0, 5, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(177, 20);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Group exported assets by";
             // 
             // openAfterExport
             // 
-            openAfterExport.AutoSize = true;
-            openAfterExport.Checked = true;
-            openAfterExport.CheckState = CheckState.Checked;
-            openAfterExport.Location = new System.Drawing.Point(7, 78);
-            openAfterExport.Margin = new Padding(4);
-            openAfterExport.Name = "openAfterExport";
-            openAfterExport.Size = new System.Drawing.Size(153, 19);
-            openAfterExport.TabIndex = 10;
-            openAfterExport.Text = "Open folder after export";
-            openAfterExport.UseVisualStyleBackColor = true;
+            this.openAfterExport.AutoSize = true;
+            this.openAfterExport.Checked = true;
+            this.openAfterExport.CheckState = CheckState.Checked;
+            this.openAfterExport.Location = new System.Drawing.Point(8, 104);
+            this.openAfterExport.Margin = new Padding(5);
+            this.openAfterExport.Name = "openAfterExport";
+            this.openAfterExport.Size = new System.Drawing.Size(193, 24);
+            this.openAfterExport.TabIndex = 10;
+            this.openAfterExport.Text = "Open folder after export";
+            this.openAfterExport.UseVisualStyleBackColor = true;
             // 
             // restoreExtensionName
             // 
-            restoreExtensionName.AutoSize = true;
-            restoreExtensionName.Checked = true;
-            restoreExtensionName.CheckState = CheckState.Checked;
-            restoreExtensionName.Location = new System.Drawing.Point(7, 24);
-            restoreExtensionName.Margin = new Padding(4);
-            restoreExtensionName.Name = "restoreExtensionName";
-            restoreExtensionName.Size = new System.Drawing.Size(204, 19);
-            restoreExtensionName.TabIndex = 9;
-            restoreExtensionName.Text = "Restore TextAsset extension name";
-            restoreExtensionName.UseVisualStyleBackColor = true;
+            this.restoreExtensionName.AutoSize = true;
+            this.restoreExtensionName.Checked = true;
+            this.restoreExtensionName.CheckState = CheckState.Checked;
+            this.restoreExtensionName.Location = new System.Drawing.Point(8, 32);
+            this.restoreExtensionName.Margin = new Padding(5);
+            this.restoreExtensionName.Name = "restoreExtensionName";
+            this.restoreExtensionName.Size = new System.Drawing.Size(255, 24);
+            this.restoreExtensionName.TabIndex = 9;
+            this.restoreExtensionName.Text = "Restore TextAsset extension name";
+            this.restoreExtensionName.UseVisualStyleBackColor = true;
             // 
             // key
             // 
-            key.Hexadecimal = true;
-            key.Location = new System.Drawing.Point(186, 103);
-            key.Margin = new Padding(4, 3, 4, 3);
-            key.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
-            key.Name = "key";
-            key.Size = new System.Drawing.Size(55, 23);
-            key.TabIndex = 8;
-            key.MouseHover += Key_MouseHover;
+            this.key.Hexadecimal = true;
+            this.key.Location = new System.Drawing.Point(213, 137);
+            this.key.Margin = new Padding(5, 4, 5, 4);
+            this.key.Maximum = new decimal(new int[] { 255, 0, 0, 0 });
+            this.key.Name = "key";
+            this.key.Size = new System.Drawing.Size(63, 27);
+            this.key.TabIndex = 8;
+            this.key.MouseHover += this.Key_MouseHover;
             // 
             // encrypted
             // 
-            encrypted.AutoSize = true;
-            encrypted.Checked = true;
-            encrypted.CheckState = CheckState.Checked;
-            encrypted.Location = new System.Drawing.Point(7, 104);
-            encrypted.Margin = new Padding(4, 3, 4, 3);
-            encrypted.Name = "encrypted";
-            encrypted.Size = new System.Drawing.Size(166, 19);
-            encrypted.TabIndex = 12;
-            encrypted.Text = "Encrypted MiHoYoBinData\r\n";
-            encrypted.UseVisualStyleBackColor = true;
+            this.encrypted.AutoSize = true;
+            this.encrypted.Checked = true;
+            this.encrypted.CheckState = CheckState.Checked;
+            this.encrypted.Location = new System.Drawing.Point(8, 139);
+            this.encrypted.Margin = new Padding(5, 4, 5, 4);
+            this.encrypted.Name = "encrypted";
+            this.encrypted.Size = new System.Drawing.Size(207, 24);
+            this.encrypted.TabIndex = 12;
+            this.encrypted.Text = "Encrypted MiHoYoBinData\r\n";
+            this.encrypted.UseVisualStyleBackColor = true;
             // 
             // convertAudio
             // 
-            convertAudio.AutoSize = true;
-            convertAudio.Checked = true;
-            convertAudio.CheckState = CheckState.Checked;
-            convertAudio.Location = new System.Drawing.Point(7, 51);
-            convertAudio.Margin = new Padding(4);
-            convertAudio.Name = "convertAudio";
-            convertAudio.Size = new System.Drawing.Size(200, 19);
-            convertAudio.TabIndex = 6;
-            convertAudio.Text = "Convert AudioClip to WAV(PCM)";
-            convertAudio.UseVisualStyleBackColor = true;
+            this.convertAudio.AutoSize = true;
+            this.convertAudio.Checked = true;
+            this.convertAudio.CheckState = CheckState.Checked;
+            this.convertAudio.Location = new System.Drawing.Point(8, 68);
+            this.convertAudio.Margin = new Padding(5);
+            this.convertAudio.Name = "convertAudio";
+            this.convertAudio.Size = new System.Drawing.Size(245, 24);
+            this.convertAudio.TabIndex = 6;
+            this.convertAudio.Text = "Convert AudioClip to WAV(PCM)";
+            this.convertAudio.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
-            panel1.Controls.Add(totga);
-            panel1.Controls.Add(tojpg);
-            panel1.Controls.Add(topng);
-            panel1.Controls.Add(tobmp);
-            panel1.Location = new System.Drawing.Point(24, 174);
-            panel1.Margin = new Padding(4);
-            panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(236, 38);
-            panel1.TabIndex = 5;
+            this.panel1.Controls.Add(this.tohdr);
+            this.panel1.Controls.Add(this.totga);
+            this.panel1.Controls.Add(this.tojpg);
+            this.panel1.Controls.Add(this.topng);
+            this.panel1.Controls.Add(this.tobmp);
+            this.panel1.Location = new System.Drawing.Point(27, 238);
+            this.panel1.Margin = new Padding(5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(329, 51);
+            this.panel1.TabIndex = 5;
+            // 
+            // tohdr
+            // 
+            this.tohdr.AutoSize = true;
+            this.tohdr.Location = new System.Drawing.Point(264, 11);
+            this.tohdr.Margin = new Padding(5);
+            this.tohdr.Name = "tohdr";
+            this.tohdr.Size = new System.Drawing.Size(55, 24);
+            this.tohdr.TabIndex = 2;
+            this.tohdr.Text = "Hdr";
+            this.tohdr.UseVisualStyleBackColor = true;
             // 
             // totga
             // 
-            totga.AutoSize = true;
-            totga.Location = new System.Drawing.Point(175, 8);
-            totga.Margin = new Padding(4);
-            totga.Name = "totga";
-            totga.Size = new System.Drawing.Size(43, 19);
-            totga.TabIndex = 2;
-            totga.Text = "Tga";
-            totga.UseVisualStyleBackColor = true;
+            this.totga.AutoSize = true;
+            this.totga.Location = new System.Drawing.Point(200, 11);
+            this.totga.Margin = new Padding(5);
+            this.totga.Name = "totga";
+            this.totga.Size = new System.Drawing.Size(54, 24);
+            this.totga.TabIndex = 2;
+            this.totga.Text = "Tga";
+            this.totga.UseVisualStyleBackColor = true;
             // 
             // tojpg
             // 
-            tojpg.AutoSize = true;
-            tojpg.Location = new System.Drawing.Point(113, 8);
-            tojpg.Margin = new Padding(4);
-            tojpg.Name = "tojpg";
-            tojpg.Size = new System.Drawing.Size(49, 19);
-            tojpg.TabIndex = 4;
-            tojpg.Text = "Jpeg";
-            tojpg.UseVisualStyleBackColor = true;
+            this.tojpg.AutoSize = true;
+            this.tojpg.Location = new System.Drawing.Point(131, 11);
+            this.tojpg.Margin = new Padding(5);
+            this.tojpg.Name = "tojpg";
+            this.tojpg.Size = new System.Drawing.Size(61, 24);
+            this.tojpg.TabIndex = 4;
+            this.tojpg.Text = "Jpeg";
+            this.tojpg.UseVisualStyleBackColor = true;
             // 
             // topng
             // 
-            topng.AutoSize = true;
-            topng.Checked = true;
-            topng.Location = new System.Drawing.Point(58, 8);
-            topng.Margin = new Padding(4);
-            topng.Name = "topng";
-            topng.Size = new System.Drawing.Size(46, 19);
-            topng.TabIndex = 3;
-            topng.TabStop = true;
-            topng.Text = "Png";
-            topng.UseVisualStyleBackColor = true;
+            this.topng.AutoSize = true;
+            this.topng.Checked = true;
+            this.topng.Location = new System.Drawing.Point(71, 11);
+            this.topng.Margin = new Padding(5);
+            this.topng.Name = "topng";
+            this.topng.Size = new System.Drawing.Size(55, 24);
+            this.topng.TabIndex = 3;
+            this.topng.TabStop = true;
+            this.topng.Text = "Png";
+            this.topng.UseVisualStyleBackColor = true;
             // 
             // tobmp
             // 
-            tobmp.AutoSize = true;
-            tobmp.Location = new System.Drawing.Point(4, 8);
-            tobmp.Margin = new Padding(4);
-            tobmp.Name = "tobmp";
-            tobmp.Size = new System.Drawing.Size(50, 19);
-            tobmp.TabIndex = 2;
-            tobmp.Text = "Bmp";
-            tobmp.UseVisualStyleBackColor = true;
+            this.tobmp.AutoSize = true;
+            this.tobmp.Location = new System.Drawing.Point(6, 11);
+            this.tobmp.Margin = new Padding(5);
+            this.tobmp.Name = "tobmp";
+            this.tobmp.Size = new System.Drawing.Size(61, 24);
+            this.tobmp.TabIndex = 2;
+            this.tobmp.Text = "Bmp";
+            this.tobmp.UseVisualStyleBackColor = true;
             // 
             // converttexture
             // 
-            converttexture.AutoSize = true;
-            converttexture.Checked = true;
-            converttexture.CheckState = CheckState.Checked;
-            converttexture.Location = new System.Drawing.Point(7, 153);
-            converttexture.Margin = new Padding(4);
-            converttexture.Name = "converttexture";
-            converttexture.Size = new System.Drawing.Size(123, 19);
-            converttexture.TabIndex = 1;
-            converttexture.Text = "Convert Texture2D";
-            converttexture.UseVisualStyleBackColor = true;
+            this.converttexture.AutoSize = true;
+            this.converttexture.Checked = true;
+            this.converttexture.CheckState = CheckState.Checked;
+            this.converttexture.Location = new System.Drawing.Point(8, 204);
+            this.converttexture.Margin = new Padding(5);
+            this.converttexture.Name = "converttexture";
+            this.converttexture.Size = new System.Drawing.Size(153, 24);
+            this.converttexture.TabIndex = 1;
+            this.converttexture.Text = "Convert Texture2D";
+            this.converttexture.UseVisualStyleBackColor = true;
             // 
             // collectAnimations
             // 
-            collectAnimations.AutoSize = true;
-            collectAnimations.Checked = true;
-            collectAnimations.CheckState = CheckState.Checked;
-            collectAnimations.Location = new System.Drawing.Point(8, 43);
-            collectAnimations.Margin = new Padding(4, 3, 4, 3);
-            collectAnimations.Name = "collectAnimations";
-            collectAnimations.Size = new System.Drawing.Size(125, 19);
-            collectAnimations.TabIndex = 24;
-            collectAnimations.Text = "Collect animations";
-            collectAnimations.UseVisualStyleBackColor = true;
+            this.collectAnimations.AutoSize = true;
+            this.collectAnimations.Checked = true;
+            this.collectAnimations.CheckState = CheckState.Checked;
+            this.collectAnimations.Location = new System.Drawing.Point(9, 57);
+            this.collectAnimations.Margin = new Padding(5, 4, 5, 4);
+            this.collectAnimations.Name = "collectAnimations";
+            this.collectAnimations.Size = new System.Drawing.Size(154, 24);
+            this.collectAnimations.TabIndex = 24;
+            this.collectAnimations.Text = "Collect animations";
+            this.collectAnimations.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            groupBox2.AutoSize = true;
-            groupBox2.Controls.Add(exportMaterials);
-            groupBox2.Controls.Add(collectAnimations);
-            groupBox2.Controls.Add(exportBlendShape);
-            groupBox2.Controls.Add(exportAnimations);
-            groupBox2.Controls.Add(scaleFactor);
-            groupBox2.Controls.Add(label5);
-            groupBox2.Controls.Add(fbxFormat);
-            groupBox2.Controls.Add(label4);
-            groupBox2.Controls.Add(fbxVersion);
-            groupBox2.Controls.Add(label3);
-            groupBox2.Controls.Add(boneSize);
-            groupBox2.Controls.Add(label2);
-            groupBox2.Controls.Add(exportSkins);
-            groupBox2.Controls.Add(label1);
-            groupBox2.Controls.Add(filterPrecision);
-            groupBox2.Controls.Add(castToBone);
-            groupBox2.Controls.Add(exportAllNodes);
-            groupBox2.Controls.Add(eulerFilter);
-            groupBox2.Location = new System.Drawing.Point(292, 15);
-            groupBox2.Margin = new Padding(4);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Padding = new Padding(4);
-            groupBox2.Size = new System.Drawing.Size(380, 236);
-            groupBox2.TabIndex = 11;
-            groupBox2.TabStop = false;
-            groupBox2.Text = "Fbx";
+            this.groupBox2.AutoSize = true;
+            this.groupBox2.Controls.Add(this.exportMaterials);
+            this.groupBox2.Controls.Add(this.collectAnimations);
+            this.groupBox2.Controls.Add(this.exportBlendShape);
+            this.groupBox2.Controls.Add(this.exportAnimations);
+            this.groupBox2.Controls.Add(this.scaleFactor);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.fbxFormat);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.fbxVersion);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.boneSize);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.exportSkins);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.filterPrecision);
+            this.groupBox2.Controls.Add(this.castToBone);
+            this.groupBox2.Controls.Add(this.exportAllNodes);
+            this.groupBox2.Controls.Add(this.eulerFilter);
+            this.groupBox2.Location = new System.Drawing.Point(392, 20);
+            this.groupBox2.Margin = new Padding(5);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new Padding(5);
+            this.groupBox2.Size = new System.Drawing.Size(434, 315);
+            this.groupBox2.TabIndex = 11;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Fbx";
             // 
             // exportMaterials
             // 
-            exportMaterials.AutoSize = true;
-            exportMaterials.Location = new System.Drawing.Point(154, 96);
-            exportMaterials.Margin = new Padding(4);
-            exportMaterials.Name = "exportMaterials";
-            exportMaterials.Size = new System.Drawing.Size(111, 19);
-            exportMaterials.TabIndex = 25;
-            exportMaterials.Text = "Export materials";
-            exportMaterials.UseVisualStyleBackColor = true;
+            this.exportMaterials.AutoSize = true;
+            this.exportMaterials.Location = new System.Drawing.Point(176, 128);
+            this.exportMaterials.Margin = new Padding(5);
+            this.exportMaterials.Name = "exportMaterials";
+            this.exportMaterials.Size = new System.Drawing.Size(139, 24);
+            this.exportMaterials.TabIndex = 25;
+            this.exportMaterials.Text = "Export materials";
+            this.exportMaterials.UseVisualStyleBackColor = true;
             // 
             // exportBlendShape
             // 
-            exportBlendShape.AutoSize = true;
-            exportBlendShape.Checked = true;
-            exportBlendShape.CheckState = CheckState.Checked;
-            exportBlendShape.Location = new System.Drawing.Point(7, 69);
-            exportBlendShape.Margin = new Padding(4);
-            exportBlendShape.Name = "exportBlendShape";
-            exportBlendShape.Size = new System.Drawing.Size(124, 19);
-            exportBlendShape.TabIndex = 22;
-            exportBlendShape.Text = "Export blendshape";
-            exportBlendShape.UseVisualStyleBackColor = true;
+            this.exportBlendShape.AutoSize = true;
+            this.exportBlendShape.Checked = true;
+            this.exportBlendShape.CheckState = CheckState.Checked;
+            this.exportBlendShape.Location = new System.Drawing.Point(8, 92);
+            this.exportBlendShape.Margin = new Padding(5);
+            this.exportBlendShape.Name = "exportBlendShape";
+            this.exportBlendShape.Size = new System.Drawing.Size(155, 24);
+            this.exportBlendShape.TabIndex = 22;
+            this.exportBlendShape.Text = "Export blendshape";
+            this.exportBlendShape.UseVisualStyleBackColor = true;
             // 
             // exportAnimations
             // 
-            exportAnimations.AutoSize = true;
-            exportAnimations.Checked = true;
-            exportAnimations.CheckState = CheckState.Checked;
-            exportAnimations.Location = new System.Drawing.Point(154, 43);
-            exportAnimations.Margin = new Padding(4);
-            exportAnimations.Name = "exportAnimations";
-            exportAnimations.Size = new System.Drawing.Size(122, 19);
-            exportAnimations.TabIndex = 21;
-            exportAnimations.Text = "Export animations";
-            exportAnimations.UseVisualStyleBackColor = true;
+            this.exportAnimations.AutoSize = true;
+            this.exportAnimations.Checked = true;
+            this.exportAnimations.CheckState = CheckState.Checked;
+            this.exportAnimations.Location = new System.Drawing.Point(176, 57);
+            this.exportAnimations.Margin = new Padding(5);
+            this.exportAnimations.Name = "exportAnimations";
+            this.exportAnimations.Size = new System.Drawing.Size(151, 24);
+            this.exportAnimations.TabIndex = 21;
+            this.exportAnimations.Text = "Export animations";
+            this.exportAnimations.UseVisualStyleBackColor = true;
             // 
             // scaleFactor
             // 
-            scaleFactor.DecimalPlaces = 2;
-            scaleFactor.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            scaleFactor.Location = new System.Drawing.Point(102, 189);
-            scaleFactor.Margin = new Padding(4);
-            scaleFactor.Name = "scaleFactor";
-            scaleFactor.Size = new System.Drawing.Size(59, 23);
-            scaleFactor.TabIndex = 20;
-            scaleFactor.TextAlign = HorizontalAlignment.Center;
-            scaleFactor.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            this.scaleFactor.DecimalPlaces = 2;
+            this.scaleFactor.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            this.scaleFactor.Location = new System.Drawing.Point(117, 252);
+            this.scaleFactor.Margin = new Padding(5);
+            this.scaleFactor.Name = "scaleFactor";
+            this.scaleFactor.Size = new System.Drawing.Size(67, 27);
+            this.scaleFactor.TabIndex = 20;
+            this.scaleFactor.TextAlign = HorizontalAlignment.Center;
+            this.scaleFactor.Value = new decimal(new int[] { 1, 0, 0, 0 });
             // 
             // label5
             // 
-            label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(8, 193);
-            label5.Margin = new Padding(4, 0, 4, 0);
-            label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(67, 15);
-            label5.TabIndex = 19;
-            label5.Text = "ScaleFactor";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(9, 257);
+            this.label5.Margin = new Padding(5, 0, 5, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 20);
+            this.label5.TabIndex = 19;
+            this.label5.Text = "ScaleFactor";
             // 
             // fbxFormat
             // 
-            fbxFormat.DropDownStyle = ComboBoxStyle.DropDownList;
-            fbxFormat.FormattingEnabled = true;
-            fbxFormat.Items.AddRange(new object[] { "Binary", "Ascii" });
-            fbxFormat.Location = new System.Drawing.Point(271, 125);
-            fbxFormat.Margin = new Padding(4);
-            fbxFormat.Name = "fbxFormat";
-            fbxFormat.Size = new System.Drawing.Size(70, 23);
-            fbxFormat.TabIndex = 18;
+            this.fbxFormat.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.fbxFormat.FormattingEnabled = true;
+            this.fbxFormat.Items.AddRange(new object[] { "Binary", "Ascii" });
+            this.fbxFormat.Location = new System.Drawing.Point(310, 167);
+            this.fbxFormat.Margin = new Padding(5);
+            this.fbxFormat.Name = "fbxFormat";
+            this.fbxFormat.Size = new System.Drawing.Size(79, 28);
+            this.fbxFormat.TabIndex = 18;
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(188, 129);
-            label4.Margin = new Padding(4, 0, 4, 0);
-            label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(65, 15);
-            label4.TabIndex = 17;
-            label4.Text = "FBXFormat";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(215, 172);
+            this.label4.Margin = new Padding(5, 0, 5, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(81, 20);
+            this.label4.TabIndex = 17;
+            this.label4.Text = "FBXFormat";
             // 
             // fbxVersion
             // 
-            fbxVersion.DropDownStyle = ComboBoxStyle.DropDownList;
-            fbxVersion.FormattingEnabled = true;
-            fbxVersion.Items.AddRange(new object[] { "6.1", "7.1", "7.2", "7.3", "7.4", "7.5" });
-            fbxVersion.Location = new System.Drawing.Point(271, 157);
-            fbxVersion.Margin = new Padding(4);
-            fbxVersion.Name = "fbxVersion";
-            fbxVersion.Size = new System.Drawing.Size(70, 23);
-            fbxVersion.TabIndex = 16;
+            this.fbxVersion.DropDownStyle = ComboBoxStyle.DropDownList;
+            this.fbxVersion.FormattingEnabled = true;
+            this.fbxVersion.Items.AddRange(new object[] { "6.1", "7.1", "7.2", "7.3", "7.4", "7.5" });
+            this.fbxVersion.Location = new System.Drawing.Point(310, 209);
+            this.fbxVersion.Margin = new Padding(5);
+            this.fbxVersion.Name = "fbxVersion";
+            this.fbxVersion.Size = new System.Drawing.Size(79, 28);
+            this.fbxVersion.TabIndex = 16;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(188, 161);
-            label3.Margin = new Padding(4, 0, 4, 0);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(65, 15);
-            label3.TabIndex = 15;
-            label3.Text = "FBXVersion";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(215, 215);
+            this.label3.Margin = new Padding(5, 0, 5, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 20);
+            this.label3.TabIndex = 15;
+            this.label3.Text = "FBXVersion";
             // 
             // boneSize
             // 
-            boneSize.Location = new System.Drawing.Point(102, 157);
-            boneSize.Margin = new Padding(4);
-            boneSize.Name = "boneSize";
-            boneSize.Size = new System.Drawing.Size(59, 23);
-            boneSize.TabIndex = 11;
-            boneSize.Value = new decimal(new int[] { 10, 0, 0, 0 });
+            this.boneSize.Location = new System.Drawing.Point(117, 209);
+            this.boneSize.Margin = new Padding(5);
+            this.boneSize.Name = "boneSize";
+            this.boneSize.Size = new System.Drawing.Size(67, 27);
+            this.boneSize.TabIndex = 11;
+            this.boneSize.Value = new decimal(new int[] { 10, 0, 0, 0 });
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(8, 161);
-            label2.Margin = new Padding(4, 0, 4, 0);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(54, 15);
-            label2.TabIndex = 10;
-            label2.Text = "BoneSize";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(9, 215);
+            this.label2.Margin = new Padding(5, 0, 5, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(70, 20);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "BoneSize";
             // 
             // exportSkins
             // 
-            exportSkins.AutoSize = true;
-            exportSkins.Checked = true;
-            exportSkins.CheckState = CheckState.Checked;
-            exportSkins.Location = new System.Drawing.Point(154, 17);
-            exportSkins.Margin = new Padding(4);
-            exportSkins.Name = "exportSkins";
-            exportSkins.Size = new System.Drawing.Size(89, 19);
-            exportSkins.TabIndex = 8;
-            exportSkins.Text = "Export skins";
-            exportSkins.UseVisualStyleBackColor = true;
+            this.exportSkins.AutoSize = true;
+            this.exportSkins.Checked = true;
+            this.exportSkins.CheckState = CheckState.Checked;
+            this.exportSkins.Location = new System.Drawing.Point(176, 23);
+            this.exportSkins.Margin = new Padding(5);
+            this.exportSkins.Name = "exportSkins";
+            this.exportSkins.Size = new System.Drawing.Size(109, 24);
+            this.exportSkins.TabIndex = 8;
+            this.exportSkins.Text = "Export skins";
+            this.exportSkins.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(8, 129);
-            label1.Margin = new Padding(4, 0, 4, 0);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(81, 15);
-            label1.TabIndex = 7;
-            label1.Text = "FilterPrecision";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(9, 172);
+            this.label1.Margin = new Padding(5, 0, 5, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 20);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "FilterPrecision";
             // 
             // filterPrecision
             // 
-            filterPrecision.DecimalPlaces = 2;
-            filterPrecision.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
-            filterPrecision.Location = new System.Drawing.Point(102, 127);
-            filterPrecision.Margin = new Padding(4);
-            filterPrecision.Name = "filterPrecision";
-            filterPrecision.Size = new System.Drawing.Size(59, 23);
-            filterPrecision.TabIndex = 6;
-            filterPrecision.Value = new decimal(new int[] { 25, 0, 0, 131072 });
+            this.filterPrecision.DecimalPlaces = 2;
+            this.filterPrecision.Increment = new decimal(new int[] { 1, 0, 0, 131072 });
+            this.filterPrecision.Location = new System.Drawing.Point(117, 169);
+            this.filterPrecision.Margin = new Padding(5);
+            this.filterPrecision.Name = "filterPrecision";
+            this.filterPrecision.Size = new System.Drawing.Size(67, 27);
+            this.filterPrecision.TabIndex = 6;
+            this.filterPrecision.Value = new decimal(new int[] { 25, 0, 0, 131072 });
             // 
             // castToBone
             // 
-            castToBone.AutoSize = true;
-            castToBone.Location = new System.Drawing.Point(154, 69);
-            castToBone.Margin = new Padding(4);
-            castToBone.Name = "castToBone";
-            castToBone.Size = new System.Drawing.Size(143, 19);
-            castToBone.TabIndex = 5;
-            castToBone.Text = "All nodes cast to bone";
-            castToBone.UseVisualStyleBackColor = true;
+            this.castToBone.AutoSize = true;
+            this.castToBone.Location = new System.Drawing.Point(176, 92);
+            this.castToBone.Margin = new Padding(5);
+            this.castToBone.Name = "castToBone";
+            this.castToBone.Size = new System.Drawing.Size(179, 24);
+            this.castToBone.TabIndex = 5;
+            this.castToBone.Text = "All nodes cast to bone";
+            this.castToBone.UseVisualStyleBackColor = true;
             // 
             // exportAllNodes
             // 
-            exportAllNodes.AutoSize = true;
-            exportAllNodes.Checked = true;
-            exportAllNodes.CheckState = CheckState.Checked;
-            exportAllNodes.Location = new System.Drawing.Point(7, 96);
-            exportAllNodes.Margin = new Padding(4);
-            exportAllNodes.Name = "exportAllNodes";
-            exportAllNodes.Size = new System.Drawing.Size(110, 19);
-            exportAllNodes.TabIndex = 4;
-            exportAllNodes.Text = "Export all nodes";
-            exportAllNodes.UseVisualStyleBackColor = true;
+            this.exportAllNodes.AutoSize = true;
+            this.exportAllNodes.Checked = true;
+            this.exportAllNodes.CheckState = CheckState.Checked;
+            this.exportAllNodes.Location = new System.Drawing.Point(8, 128);
+            this.exportAllNodes.Margin = new Padding(5);
+            this.exportAllNodes.Name = "exportAllNodes";
+            this.exportAllNodes.Size = new System.Drawing.Size(138, 24);
+            this.exportAllNodes.TabIndex = 4;
+            this.exportAllNodes.Text = "Export all nodes";
+            this.exportAllNodes.UseVisualStyleBackColor = true;
             // 
             // eulerFilter
             // 
-            eulerFilter.AutoSize = true;
-            eulerFilter.Checked = true;
-            eulerFilter.CheckState = CheckState.Checked;
-            eulerFilter.Location = new System.Drawing.Point(8, 17);
-            eulerFilter.Margin = new Padding(4);
-            eulerFilter.Name = "eulerFilter";
-            eulerFilter.Size = new System.Drawing.Size(78, 19);
-            eulerFilter.TabIndex = 3;
-            eulerFilter.Text = "EulerFilter";
-            eulerFilter.UseVisualStyleBackColor = true;
-            // 
-            // toolTip
-            // 
-            toolTip.AutomaticDelay = 1000;
-            toolTip.UseAnimation = false;
-            toolTip.UseFading = false;
+            this.eulerFilter.AutoSize = true;
+            this.eulerFilter.Checked = true;
+            this.eulerFilter.CheckState = CheckState.Checked;
+            this.eulerFilter.Location = new System.Drawing.Point(9, 23);
+            this.eulerFilter.Margin = new Padding(5);
+            this.eulerFilter.Name = "eulerFilter";
+            this.eulerFilter.Size = new System.Drawing.Size(97, 24);
+            this.eulerFilter.TabIndex = 3;
+            this.eulerFilter.Text = "EulerFilter";
+            this.eulerFilter.UseVisualStyleBackColor = true;
             // 
             // Reset
             // 
-            Reset.Location = new System.Drawing.Point(300, 428);
-            Reset.Name = "Reset";
-            Reset.Size = new System.Drawing.Size(88, 26);
-            Reset.TabIndex = 12;
-            Reset.Text = "Reset";
-            Reset.UseVisualStyleBackColor = true;
-            Reset.Click += Reset_Click;
+            this.Reset.Location = new System.Drawing.Point(343, 571);
+            this.Reset.Margin = new Padding(3, 4, 3, 4);
+            this.Reset.Name = "Reset";
+            this.Reset.Size = new System.Drawing.Size(101, 35);
+            this.Reset.TabIndex = 12;
+            this.Reset.Text = "Reset";
+            this.Reset.UseVisualStyleBackColor = true;
+            this.Reset.Click += this.Reset_Click;
             // 
             // ExportOptions
             // 
-            AcceptButton = OKbutton;
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            CancelButton = Cancel;
-            ClientSize = new System.Drawing.Size(677, 467);
-            Controls.Add(Reset);
-            Controls.Add(groupBox2);
-            Controls.Add(groupBox1);
-            Controls.Add(Cancel);
-            Controls.Add(OKbutton);
-            FormBorderStyle = FormBorderStyle.Fixed3D;
-            Margin = new Padding(4);
-            MaximizeBox = false;
-            MinimizeBox = false;
-            Name = "ExportOptions";
-            ShowIcon = false;
-            ShowInTaskbar = false;
-            StartPosition = FormStartPosition.CenterScreen;
-            Text = "Export options";
-            TopMost = true;
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)key).EndInit();
-            panel1.ResumeLayout(false);
-            panel1.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)scaleFactor).EndInit();
-            ((System.ComponentModel.ISupportInitialize)boneSize).EndInit();
-            ((System.ComponentModel.ISupportInitialize)filterPrecision).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AcceptButton = this.OKbutton;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleMode = AutoScaleMode.Font;
+            this.CancelButton = this.Cancel;
+            this.ClientSize = new System.Drawing.Size(838, 623);
+            this.Controls.Add(this.Reset);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.Cancel);
+            this.Controls.Add(this.OKbutton);
+            this.FormBorderStyle = FormBorderStyle.Fixed3D;
+            this.Margin = new Padding(5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "ExportOptions";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.Text = "Export options";
+            this.TopMost = true;
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)this.key).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)this.scaleFactor).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this.boneSize).EndInit();
+            ((System.ComponentModel.ISupportInitialize)this.filterPrecision).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
 
         #endregion
@@ -751,6 +769,7 @@ namespace AssetStudio.GUI
         private System.Windows.Forms.RadioButton topng;
         private System.Windows.Forms.RadioButton tobmp;
         private System.Windows.Forms.RadioButton totga;
+        private System.Windows.Forms.RadioButton tohdr;
         private System.Windows.Forms.CheckBox convertAudio;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox2;
